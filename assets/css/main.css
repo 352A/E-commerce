@@ -1,8 +1,30 @@
+/* .colors {
+        --bole: #774936ff;
+        --bole-2: #6e4230ff;
+        --bole-3: #653a2aff;
+        --caput-mortuum: #5c3324ff;
+        --caput-mortuum-2: #532c1eff;
+        --caput-mortuum-3: #4a2419ff;
+        --black-bean: #411d13ff;
+        --black-bean-2: #38160dff;
+        --black-bean-3: #2f0e07ff;
+        --black-bean-4: #260701ff;
+      } */
+
 /* navbar  */
+
+.navbar-1 {
+  z-index: 100;
+}
+
+.navbar-1 .dropdown-menu {
+  z-index: 200;
+}
 
 nav i {
   font-style: normal;
-  color: #754015;
+
+  font-size: 1.1rem;
 }
 
 .navbar-1 {
@@ -21,13 +43,22 @@ nav i {
 
 /* featured products */
 
-.h-scroll {
+html,
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.h-scroll-parent {
   overflow-x: auto;
 }
 
-.h-scroll .row,
-.navbar-nav {
-  display: flex;
+.h-scroll-child {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -74,4 +105,19 @@ nav i {
 .currency {
   font-weight: 400;
   font-size: 1rem;
+}
+
+/* wishlist */
+
+.wishlist-img {
+  height: 12rem;
+  object-fit: cover;
+}
+
+/* cart */
+
+.cart-img {
+  height: 12rem;
+  width: 14rem;
+  object-fit: cover;
 }

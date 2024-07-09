@@ -15,7 +15,8 @@ class WishlistController {
   }
 
   static renderWishlist() {
-    const wishlistItems = Wishlist.getWishlistItems();
+    let wishlistItems = Wishlist.getWishlistItems();
+    wishlistItems = wishlistItems.reverse();
     const wishlistContainer = document.getElementById("wishlist-wrapper");
     wishlistContainer.innerHTML = "";
     if (wishlistItems.length > 0) {
@@ -27,7 +28,7 @@ class WishlistController {
       <div class="card col-12 col-xl-2">
         <img
           src="../assets/images/${product.imgName}"
-          class="card-img-top rounded-2 mt-3"
+          class="wishlist-img card-img-top rounded-2 mt-3"
           alt="${product.name}"
         />
         <div class="product-btns d-flex flex-column">

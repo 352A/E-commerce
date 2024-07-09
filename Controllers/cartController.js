@@ -30,12 +30,12 @@ class CartController {
       cartItems.forEach((item) => {
         const product = Product.getProductById(item.itemId);
         const cartItem = `
-           <div class="card my-4 p-2">
+           <div class="card my-4 p-1">
             <div class="row g-4 align-items-center">
               <div class="col-6 col-md-4 border-end h-50">
                 <img
                   src="../assets/images/${product.imgName}"
-                  class="img-fluid rounded-4 p-2"
+                  class="cart-img img-fluid rounded-4 p-2"
                   alt="..."
                 />
               </div>
@@ -43,13 +43,13 @@ class CartController {
                 <div class="card-body">
                   <h6 class="card-title">${product.name}</h6>
                   <h4>${product.price} <span class="currency">EGP</span></h4>
-                  <p class="card-text">${product.description}</p>
-                  <p class="card-text">
+                  <p class="card-text m-0">${product.description}</p>
+                  <p class="card-text text-success m-0 ">
                     <small class="text-body-secondary"
-                      ><i class="bi bi-box-seam-fill"></i> Delivered within a week</small
+                      ><i class="bi bi-box-seam-fill"></i> <span> Delivered within a week</span></small
                     >
                   </p>
-                  <div class="d-flex justify-content-start mt-4 gap-2 col-xl-4">
+                  <div class="d-flex justify-content-start mt-2 gap-2 col-xl-4">
                     <input
                       class="form-control form-control-sm quantity-btn"
                       type="number"

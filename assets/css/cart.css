@@ -3,3 +3,10 @@
   object-fit: cover;
   object-position: 65%;
 }
+
+#cart-items {
+  max-height: 400px; /* Adjust this value as needed */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}

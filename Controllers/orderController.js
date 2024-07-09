@@ -58,8 +58,12 @@ class OrderController {
     ordersContainer.innerHTML = "";
     if (orders.length > 0) {
       orders.forEach((order) => {
+        let orderTotal = 0;
+        const paymentMethod = order.paymentMethod;
+
         order.itemId.forEach((item) => {
           const product = Product.getProductById(item.itemId);
+          orderTotal += order.totalPrice;
           const deliveryDate = order.date;
           const date = new Date(deliveryDate);
           const expectedDeliveryDate = new Date(deliveryDate);
@@ -117,7 +121,14 @@ class OrderController {
         ordersContainer.innerHTML += `
        <div class="order-wrapper card text-bg-light my-3 col-12 col-xl-7 p-3">
        
-       <span class="badge text-bg-info col-xl-4 text-light">Order ID: ${order.orderId}</span>
+       <span class="badge text-bg-info col-xl-4 text-light">Order ID: ${
+         order.orderId
+       }</span>
+       <h6 class="mt-3"> Total Price: <span class="fw-normal">${orderTotal.toFixed(
+         2
+       )}</span><small class="fw-normal"> EGP</small> </h6>
+       <h6>Payment Method: <span class="fw-normal">${paymentMethod}</span> </h6>
+
       
         ${orderItems}
         </div>
