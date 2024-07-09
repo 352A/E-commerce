@@ -59,7 +59,8 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 200;
 }
 
-.navbar-1 a:active {
+.dropdown-menu a:active,
+.dropdown-menu a:focus {
   background-color: #0dcaf0;
   color: white;
 }
