@@ -159,7 +159,7 @@
             <ul class="navbar-nav me-auto mt-4 mt-xl-0 mb-2 mb-lg-0">
               <li class="nav-item" id="logged-user">
                 <a class="nav-link active" aria-current="page" href="#"
-                  ><i class="bi bi-person-fill">&nbsp Login</i></a
+                  ><i class="bi bi-person-fill text-light">&nbsp Login</i></a
                 >
               </li>
               <li class="nav-item">
@@ -191,9 +191,9 @@
       <!-- second navbar start -->
       <nav class="navbar navbar-expand navbar-light bg-light">
         <div
-          class="container h-scroll justify-content-start flex-nowrap overflow-auto"
+          class="container h-scroll-parent justify-content-start flex-nowrap overflow-auto"
         >
-          <ul class="navbar-nav mb-2 mb-lg-0 col-12 col-xl-6">
+          <ul class="navbar-nav mb-2 mb-lg-0 col-12 col-xl-6 h-scroll-child">
             <li class="nav-item border-end mx-2 col-4 col-xl-3">
               <a class="nav-link active" href="#"> All Categories </a>
             </li>
@@ -317,12 +317,12 @@
           class="row my-4 justify-content-start flex-nowrap p-2 h-scroll-child scrollable-content"
         ></div>
         <div
-          class="position-absolute top-50 start-0 d-flex justify-content-between w-100 opacity-75"
+          class="position-absolute top-50 start-0 d-flex justify-content-between w-100 opacity-100"
         >
-          <button class="btn btn-primary rounded-circle" id="scroll-btn-left">
+          <button class="btn btn-warning rounded-circle" id="scroll-btn-left">
             <i class="bi bi-chevron-left"></i>
           </button>
-          <button class="btn btn-primary rounded-circle" id="scroll-btn-right">
+          <button class="btn btn-info rounded-circle" id="scroll-btn-right">
             <i class="bi bi-chevron-right"></i>
           </button>
         </div>
@@ -437,11 +437,31 @@
             <div class="col-lg-4 mb-4">
               <h5>Categories</h5>
               <ul class="list-unstyled">
-                <li><a href="#">Furniture</a></li>
-                <li><a href="#">Storage</a></li>
-                <li><a href="#">Lighting</a></li>
-                <li><a href="#">Tables</a></li>
-                <li><a href="#">Desks</a></li>
+                <li>
+                  <a href="#" class="text-decoration-none text-warning"
+                    >Furniture</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none text-warning"
+                    >Storage</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none text-warning"
+                    >Lighting</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none text-warning"
+                    >Tables</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-decoration-none text-warning"
+                    >Desks</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="col-lg-4 mb-4">
@@ -472,7 +492,7 @@
 
       //navbar welcome
 
-      let currentUser = true;
+      let currentUser = false;
 
       if (currentUser) {
         const loggedUser = document.getElementById("logged-user");
@@ -484,7 +504,8 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="userDashboard.html">Profile</a></li>
             <li><a class="dropdown-item" href="orders.html">Orders</a></li>
-            <button class="btn btn-primary col-10 mt-2 mx-2">Logout</button>
+            <li class="d-flex justify-content-center mt-2"><button class="btn btn-info col-10 ">Logout</button></li>
+          
           </ul>
         </div>
         `;

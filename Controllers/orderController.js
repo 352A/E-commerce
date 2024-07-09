@@ -98,7 +98,7 @@ class OrderController {
               )} <span class="currency">EGP</span></h4>
             </div>
             <p class="card-text small my-1">${product.description}</p>
-            <p class="card-text small my-1">Status: <span class="text-success">${
+            <p class="card-text small my-1">Status: <span class="text-success fw-semibold">${
               order.status
             }</span></p>
             <p class="card-text small my-1">
@@ -124,10 +124,10 @@ class OrderController {
        <span class="badge text-bg-info col-xl-4 text-light">Order ID: ${
          order.orderId
        }</span>
-       <h6 class="mt-3"> Total Price: <span class="fw-normal">${orderTotal.toFixed(
+       <h6 class="mt-3 ms-1"> Total Price: <span class="fw-normal">${orderTotal.toFixed(
          2
        )}</span><small class="fw-normal"> EGP</small> </h6>
-       <h6>Payment Method: <span class="fw-normal">${paymentMethod}</span> </h6>
+       <h6 class="ms-1">Payment Method: <span class="fw-normal">${paymentMethod}</span> </h6>
 
       
         ${orderItems}
