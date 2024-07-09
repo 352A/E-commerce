@@ -75,3 +75,22 @@
 .promotion:hover img {
   transform: scale(1.2) rotate(5deg) translateX(20px);
 }
+
+@media screen and (max-width: 786px) {
+  .carousel-item:nth-child(1) img,
+  .carousel-item:nth-child(2) img {
+    height: 80vh;
+    object-fit: cover;
+    object-position: 90% 60%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
